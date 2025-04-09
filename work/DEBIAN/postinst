@@ -1,0 +1,2 @@
+#!/bin/sh -e
+echo "aaaaa" > /home/ubuntu/log.txt
