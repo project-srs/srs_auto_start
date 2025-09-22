@@ -1,0 +1,13 @@
+[Unit]
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/data
+ExecStart=/data/ros2_app.sh
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+

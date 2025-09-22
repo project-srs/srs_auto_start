@@ -1,2 +1,26 @@
 #!/bin/sh -e
-echo "aaaaa" > /home/ubuntu/log.txt
+
+systemctl enable srs-ros2-app.service
+
+if [ ! -d "/data" ]; then
+    echo "Creating /data directory..."
+    mkdir -p /data
+    chown root:root /data
+    chmod 755 /data
+else
+    echo "/data directory already exists."
+fi
+
+if [ ! -f "/data/ros2_app.sh" ]; then
+    echo "Creating application script..."
+    cat <<EOF > /data/ros2_app.sh
+#!/bin/bash
+echo test
+EOF
+    chown root:root /data/ros2_app.sh
+    chmod 755 /data/ros2_app.sh
+else
+    echo "/data/ros2_app.sh script already exists."
+fi
+
+exit 0

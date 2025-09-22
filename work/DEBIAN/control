@@ -1,7 +1,7 @@
 Package: srs-auto-start
 Maintainer: Project-SRS <project@srs.com>
 Architecture: amd64
-Version: 1.0-20250409-153204
+Version: 1.0-20250922-094107
 Description: auto start program for srs robot
  systemd auto start script for srs robots
  and other scripts
